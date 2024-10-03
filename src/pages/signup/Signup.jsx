@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Signup = () => {
+const SignUp = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [mobile, setMobile] = useState('');
@@ -131,4 +131,4 @@ const Signup = () => {
     );
 }
 
-export default Signup;
+export default SignUp;
