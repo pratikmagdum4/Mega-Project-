@@ -16,6 +16,19 @@ const Signup = () => {
             console.error('Passwords do not match');
             return;
         }
+        if (!name)
+        {
+            console.error('name not there');
+            return;
+        }
+        if (!email) {
+            console.error('email not there');
+            return;
+        }
+        if (!mobile) {
+            console.error('mobile not there');
+            return;
+        }
         try {
             const response = await axios.post('http://localhost:5000/signup', {
                 name,

@@ -1,6 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const navigate = useNavigate();
+    const handleLogin=()=>{
+        navigate('/login')
+    }
+    const handleSignUp=()=>{
+        navigate('/signup')
+    }
     return (
         <>
             <header className="bg-gray-800 p-4 flex justify-between items-center">
@@ -9,8 +17,9 @@ const Home = () => {
                     <ul className="flex gap-5 m-0 p-0 list-none">
                         <li><a href="#" className="text-white no-underline">Home</a></li>
                         <li><a href="#" className="text-white no-underline">About Us</a></li>
-                        <li><a href="Login.html" className="text-white no-underline">Log In</a></li>
-                        <li><a href="Signup.html" className="text-white no-underline">Sign Up</a></li>
+                        <button className="text-white no-underline" onClick={handleLogin}> Login</button>
+                        {/* <li><a href="Login.html" className="text-white no-underline">Log In</a></li> */}
+                        <button className="text-white no-underline" onClick={handleSignUp}> SignUp</button>
                     </ul>
                 </nav>
             </header>
